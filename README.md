@@ -27,7 +27,7 @@ python tinyimagenet_splits.py
 ```
 
 ### Feature Extraction
-Extract features using pre-trained models from [torchvision.models](https://pytorch.org/vision/stable/models.html) to train classifiers. Note the feature here is different from the one in the paper, which is "the last layer output of an ML model (e.g., ResNet-18)  trained on the target dataset,
+Extract features using pre-trained models from [torchvision.models](https://pytorch.org/vision/stable/models.html) to train classifiers, because all these models are pre-trained on ImageNet-1K which has a different class label output dimension than other datasets. Note the feature here is different from the one in the paper, which is "the last layer output of an ML model (e.g., ResNet-18)  trained on the target dataset,
 given an input image".
 ```bash
 # network_name in ["resnet18", "resnet34", "resnet50", "resnet101", "swin_v2_t", "swin_v2_s", "swin_v2_b"]
